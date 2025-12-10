@@ -22,7 +22,7 @@ class LineNumberView: NSRulerView {
         font = textView.font ?? NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         lineNumberAttributes = [
             NSAttributedString.Key.font: font,
-            NSAttributedString.Key.foregroundColor: NSColor.gray,
+            NSAttributedString.Key.foregroundColor: NSColor.gray
         ]
         super.init(scrollView: textView.enclosingScrollView!, orientation: NSRulerView.Orientation.verticalRuler)
         clientView = textView
@@ -54,7 +54,8 @@ class LineNumberView: NSRulerView {
 
         // The line number for the first visible line
         let range = Range(NSRange(location: 0, length: firstVisibleGlyphCharacterIndex), in: textView.string)!
-        var lineNumberCounter = textView.string[range.lowerBound ..< range.upperBound].components(separatedBy: "\n").count
+        let substring = textView.string[range.lowerBound ..< range.upperBound]
+        var lineNumberCounter = substring.components(separatedBy: "\n").count
         var glyphIndexForStringLine = visibleGlyphRange.location
 
         // Go through the text line by line

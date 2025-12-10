@@ -136,7 +136,10 @@ class AttributeInspectorWindowController: NSWindowController {
             // Show success feedback
             let alert = NSAlert()
             alert.messageText = NSLocalizedString("attribute_removed_title", comment: "Attribute removed title")
-            alert.informativeText = String(format: NSLocalizedString("attribute_removed_message", comment: "Attribute removed message"), attributeName)
+            alert.informativeText = String(
+                format: NSLocalizedString("attribute_removed_message", comment: "Attribute removed message"),
+                attributeName
+            )
             alert.alertStyle = .informational
             alert.runModal()
         } catch let error as NSError {
