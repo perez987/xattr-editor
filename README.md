@@ -4,9 +4,9 @@
 
 Simple GUI application to view/edit extended file attributes on macOS.
 
-<img  src="Images/Xattr2-1.png" width="256">
+<img  src="Images/App1.png" width="256">
 
-![App](Images/xattr2-2.png)
+![App](Images/App2.png)
 
-![App](Images/Xattr2-3.png)
+![App](Images/App3.png)
 
